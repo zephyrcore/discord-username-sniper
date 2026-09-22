@@ -2,27 +2,39 @@
 
 
 # Orca Username Claimer
-**Orca Claimer is a proof-of-concept that models a  flaw in a username allocation service in  discord where internal release metadata is exposed before a username returns to the public availability pool.**
-
-The simulated flaw, internally nicknamed Release Window Disclosure (RWD), exposes a server-authoritative unix epoch timestamp and a short post-release grace window. This PROOF OF CONCEPT uses that information to demonstrate how a client could synchronize a claim attempt to the exact millisecond rather than repeatedly polling for availability.
+**Orca Claimer is a proof-of-concept demonstrating a  Discord username allocation flaw that exposes exact release timestamps and grace-window metadata.**
 
 
+
+Using this timing leak, Orca synchronizes claim attempts to the precise millisecond a username is released—without constant availability polling.
+
+---
+
+
+
+
+## What this tool contains
+
+* **Multi-username monitoring** — Track multiple targets simultaneously.
+* **Multi-token support** — Pair accounts with individual usernames.
+* **Low-latency core** — Optimized to reduce request and processing overhead.
+* **JA3 fingerprinting** — Supports customizable TLS client fingerprints.
+* **Concurrent claiming** — Processes multiple claim targets independently.
+* **QUIC/UDP transport** — Uses the project’s low-latency transport layer where supported.
+* **Grace claiming** — Dynamically calculates simulated release timing and schedules claims around the exact release window.
+* **Lightweight** — Minimal dependencies, fast startup, simple configuration.
+
+
+
+
+
+
+---
 </div>
 
 <div align="center">
-  <img src="./orcaclaimer" width="1000" alt="Orca Claimer banner" />
+  <img src="./assets/image.png" width="1000" alt="Orca Claimer banner" />
 </div>
-
-## Features
-
-* **Multi-username monitoring** — Track multiple usernames simultaneously.
-* **Multi-token support** — Pair individual accounts with individual target usernames.
-* **Low-latency architecture** — Designed to minimize request and processing overhead.
-* **JA3 fingerprint support** — Customizable TLS client fingerprints for request handling.
-* **Concurrent claiming** — Handles multiple username targets independently.
-* **QUIC/UDP transport support** — Uses the project's low-latency transport implementation for supported operations.
-* **Lightweight** — Minimal dependencies and straightforward configuration.
-* **Grace claiming** - Tracks and calculates the username release time dynamically then claims it as it becomes available
 
 ## Installation
 
