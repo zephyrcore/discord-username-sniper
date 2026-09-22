@@ -11,21 +11,42 @@ Using this timing leak, Orca synchronizes claim attempts to the precise millisec
 ---
 
 
+<h2 align="center">What this tool contains</h2>
 
-
-## What this tool contains
-
-* **Multi-username monitoring** — Track multiple targets simultaneously.
-* **Multi-token support** — Pair accounts with individual usernames.
-* **Low-latency core** — Optimized to reduce request and processing overhead.
-* **JA3 fingerprinting** — Supports customizable TLS client fingerprints.
-* **Concurrent claiming** — Processes multiple claim targets independently.
-* **QUIC/UDP transport** — Uses the project’s low-latency transport layer where supported.
-* **Grace claiming** — Dynamically calculates simulated release timing and schedules claims around the exact release window.
-* **Lightweight** — Minimal dependencies, fast startup, simple configuration.
-
-
-
+<table align="center">
+  <tr>
+    <td><b>Multi-username monitoring</b></td>
+    <td>Track multiple targets simultaneously.</td>
+  </tr>
+  <tr>
+    <td><b>Multi-token support</b></td>
+    <td>Pair accounts with individual usernames.</td>
+  </tr>
+  <tr>
+    <td><b>Low-latency core</b></td>
+    <td>Optimized to reduce request and processing overhead.</td>
+  </tr>
+  <tr>
+    <td><b>JA3 fingerprinting</b></td>
+    <td>Supports customizable TLS client fingerprints.</td>
+  </tr>
+  <tr>
+    <td><b>Concurrent claiming</b></td>
+    <td>Processes multiple claim targets independently.</td>
+  </tr>
+  <tr>
+    <td><b>QUIC/UDP transport</b></td>
+    <td>Uses the project's low-latency transport layer where supported.</td>
+  </tr>
+  <tr>
+    <td><b>Grace claiming</b></td>
+    <td>Calculates simulated release timing and schedules claims around the release window.</td>
+  </tr>
+  <tr>
+    <td><b>Lightweight</b></td>
+    <td>Minimal dependencies, fast startup, simple configuration.</td>
+  </tr>
+</table>
 
 
 
