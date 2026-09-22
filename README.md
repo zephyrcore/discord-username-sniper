@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="docs/assets/logo.svg" width="200" alt="MeetingTax logo" />
 
 # Orca Username Claimer
 **A high-performance Discord username availability monitor and claimer built for low-latency operation.**
 
 
 </div>
+
+
+<img src="docs/assets/logo.png" width="200" alt="orca" />
 
 ## Features
 
