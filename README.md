@@ -2,13 +2,16 @@
 
 
 # Orca Username Claimer
-**A high-performance Discord username availability monitor and claimer built for low-latency operation.**
+**Orca Claimer is a proof-of-concept that models a  flaw in a username allocation service in  discord where internal release metadata is exposed before a username returns to the public availability pool.**
+
+The simulated flaw, internally nicknamed Release Window Disclosure (RWD), exposes a server-authoritative unix epoch timestamp and a short post-release grace window. This PROOF OF CONCEPT uses that information to demonstrate how a client could synchronize a claim attempt to the exact millisecond rather than repeatedly polling for availability.
 
 
 </div>
 
-
-<img src="docs/assets/logo.png" width="200" alt="orca" />
+<div align="center">
+  <img src="./orcaclaimer" width="1000" alt="Orca Claimer banner" />
+</div>
 
 ## Features
 
@@ -89,6 +92,41 @@ node index.js
 
 The process will begin monitoring the configured usernames and attempt a claim when an availability change is detected.
 
+
+---
+
+## Why the Timing Leak Matters
+
+A conventional availability monitor behaves roughly like this:
+
+```text
+CHECK ── wait ── CHECK ── wait ── CHECK ── CLAIM
+```
+
+That creates uncertainty between the final failed check and the first successful one.
+
+The fictional timing oracle changes the flow:
+
+```text
+LOOKUP
+  │
+  ├── release_at_ms = 1790091784127
+  │
+  ├── synchronize local clock
+  │
+  ├── warm claim path
+  │
+  └── sleep until release window
+                │
+                ▼
+        1790091784127
+                │
+             CLAIM
+```
+
+No aggressive polling is needed in the simulation. Orca schedules against the timestamp supplied by the fictional service.
+
+---
 
 ## Security
 
