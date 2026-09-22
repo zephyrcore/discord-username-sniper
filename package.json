@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "axios": "^1.15.0",
-    "better-envforge": "^1.0.0"
+    "envparse3": "^1.0.1"
   }
 }
