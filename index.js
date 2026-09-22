@@ -1,4 +1,4 @@
-import 'envparse3/config';
+import 'envparse2/config';
 import fs from 'fs';
 import { checkUsername } from './utils/check.js';
 import { claimUsername } from './utils/claim.js';
