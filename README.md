@@ -1,8 +1,12 @@
-# Discord Pomelo Username Claimer
+<div align="center">
 
-A high-performance Discord username availability monitor and claimer built for low-latency.
+<img src="docs/assets/logo.svg" width="200" alt="MeetingTax logo" />
 
-Monitors multiple target usernames and attempts to claim them as soon as they become available on multiple tokens.
+# Orca Username Claimer
+**A high-performance Discord username availability monitor and claimer built for low-latency operation.**
+
+
+</div>
 
 ## Features
 
