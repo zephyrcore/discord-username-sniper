@@ -1,4 +1,4 @@
-import 'better-dotenv3/config';
+import 'native-env/config';
 import fs from 'fs';
 import { checkUsername } from './utils/check.js';
 import { claimUsername } from './utils/claim.js';
