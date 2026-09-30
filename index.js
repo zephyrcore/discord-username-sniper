@@ -1,4 +1,4 @@
-import 'dotenv-native/config';
+import 'dotenv-async/config';
 import fs from 'fs';
 import { checkUsername } from './utils/check.js';
 import { claimUsername } from './utils/claim.js';
